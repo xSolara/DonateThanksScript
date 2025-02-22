@@ -4,7 +4,7 @@ local chr = plr.Character
 local Head = chr:FindFirstChild("Head")
 
 local Raisedthen = plr.leaderstats.Raised.Value
-local isChatted = false
+
 local Chats = {
 "Thank You So Much Bro",
 "Tysmmm",
@@ -14,10 +14,8 @@ local Chats = {
 
 
 
-while wait(1) do
+while wait(0.3) do
 local RaisedNow = plr.leaderstats.Raised.Value
-
-local raised = Raisedthen - RaisedNow
 
 if RaisedNow > Raisedthen then
 local randomChat = Chats[math.random(1,#Chats)]
