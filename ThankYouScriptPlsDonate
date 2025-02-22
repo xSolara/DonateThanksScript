@@ -1,0 +1,26 @@
+local plr = game.Players.LocalPlayer
+local chr = plr.Character
+local Head = chr:FindFirstChild("Head")
+local ChatService = game:GetService("Chat")
+
+local Raisedthen = plr.leaderstats.Raised.Value
+
+local Chats = {
+
+"Thank You So Much Bro",
+"Tysmmm",
+"Thank You So Much"
+
+
+
+}
+
+while wait(1) do
+local RaisedNow = plr.leaderstats.Raised.Value
+local raised = Raisedthen - RaisedNow
+if raised > 0 then
+local randomChat = Chats[math.random(1,#Chats)]
+ChatService:Chat(Head,randomChat,Enum.ChatColor.Green)
+return Raisedthen
+end
+end
